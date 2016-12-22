@@ -1,0 +1,10 @@
+Package: dellardos-system
+Version: 1.39
+Section: base
+Priority: important
+Architecture: all
+Depends: jwm, gxmessage, ceni, lxqt-sudo, firejail
+Maintainer: gameblabla
+Description: Dellardos System files.
+ System files for DellardOS, 
+ Don't remove !

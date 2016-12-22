@@ -1,0 +1,6 @@
+Assurez-vous d'avoir une connection internet qui fonctionne !
+Il est possible que vous avez une connection internet qui fonctionne
+mais qui est derrière un proxy.
+Dans ce cas, configurer APT afin qu'il utilise le proxy.
+
+Voulez-vous tenté de faire la mise à jour malgré cela ?

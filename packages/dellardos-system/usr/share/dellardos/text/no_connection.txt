@@ -1,0 +1,5 @@
+Make sure you have a working internet connection !
+It's possible that you have internet but might be behind a proxy.
+In this case, configure APT to go through the proxy instead.
+
+Do you want to attempt a forced upgrade despite this ?

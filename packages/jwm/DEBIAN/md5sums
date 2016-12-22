@@ -1,0 +1,14 @@
+87c33f2f12a73665cf63ecf1192bb30d  usr/bin/jwm
+f714f8f460b028370902e90ed314ad97  usr/lib/jwm/jwm-2.3.xslt
+1eedb4e96f2c11bccb86257dcaccc8da  usr/lib/jwm/jwm-poweroff.sh
+1f1ca18218ad1b9a471468e3e28bafc8  usr/share/doc/jwm/changelog.Debian.gz
+2bf92974fce7aeeda145d6e63284021f  usr/share/doc/jwm/changelog.gz
+4ceaa8f88408610da104265a5897fb3c  usr/share/doc/jwm/copyright
+ae114d770251b0fbd4eeeedec5642090  usr/share/doc/jwm/examples/example.jwmrc.gz
+24d3c39955518bcb3e56f5c1da375bea  usr/share/jwm/jwm-blue.svg
+fb225c214ee1af25b1072f0803729e8e  usr/share/jwm/jwm-gray.svg
+5bf9f22eec53270160c85d5712b3beb0  usr/share/jwm/jwm-orange.svg
+d5930d745eabba513886109057b24480  usr/share/jwm/jwm-red.svg
+1656ad5e93a5dd78b61fdc519269d76b  usr/share/jwm/jwm.xbm
+ddb1cd0c5f51251640cfe281cb57ec94  usr/share/man/man1/jwm.1.gz
+897794347bb05e9027ddc0f1d985081c  usr/share/xsessions/jwm.desktop

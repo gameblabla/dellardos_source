@@ -1,0 +1,7 @@
+Origin: DellardOS
+Codename: ceres
+Label: dellard
+Version: 1.0.0
+Components: main
+Architectures: i386
+SignWith: 2FC3176C

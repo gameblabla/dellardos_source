@@ -1,0 +1,50 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installmenu
+inst=/etc/menu-methods/jwm
+if [ -f $inst ]; then
+	chmod a+x $inst
+	if [ -x "`which update-menus 2>/dev/null`" ]; then
+		update-menus
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installwm
+if [ "$1" = "configure" ]; then
+	update-alternatives --install /usr/bin/x-window-manager \
+		x-window-manager /usr/bin/jwm 20 \
+		--slave /usr/share/man/man1/x-window-manager.1.gz \
+		x-window-manager.1.gz /usr/share/man/man1/jwm.1.gz
+		
+	if [ -L "/usr/bin/x-window-manager" ] ; then
+	   if [ -e "/usr/bin/x-window-manager" ] ; then
+		  echo "Good link"
+	   else
+		  echo "Broken link, fixing it"
+		  rm /usr/bin/x-window-manager
+		  ln -s /usr/bin/jwm /usr/bin/x-window-manager
+		update-alternatives --install /usr/bin/x-window-manager \
+			x-window-manager /usr/bin/jwm 20 \
+			--slave /usr/share/man/man1/x-window-manager.1.gz \
+			x-window-manager.1.gz /usr/share/man/man1/jwm.1.gz
+	   fi
+	elif [ -e "/usr/bin/x-window-manager" ] ; then
+		echo "Not a link"
+		rm /usr/bin/x-window-manager
+		ln -s /usr/bin/jwm /usr/bin/x-window-manager
+		update-alternatives --install /usr/bin/x-window-manager \
+			x-window-manager /usr/bin/jwm 20 \
+			--slave /usr/share/man/man1/x-window-manager.1.gz \
+			x-window-manager.1.gz /usr/share/man/man1/jwm.1.gz
+	else
+	   echo "Missing"
+		ln -s /usr/bin/jwm /usr/bin/x-window-manager
+		update-alternatives --install /usr/bin/x-window-manager \
+			x-window-manager /usr/bin/jwm 20 \
+			--slave /usr/share/man/man1/x-window-manager.1.gz \
+			x-window-manager.1.gz /usr/share/man/man1/jwm.1.gz
+	fi
+
+		
+fi
+# End automatically added section

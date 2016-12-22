@@ -1,0 +1,145 @@
+#!/bin/bash
+
+check=$(which bootcd2disk)
+
+if [ "$check" = "" ]; then
+
+if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+	echo "DellardOS est deja installe !"
+else
+	echo "DellardOS is already installed !"
+fi
+
+else
+
+clear
+
+if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+	echo "Par defaut,"
+	echo "DellardOS est configuré en tant que clavier QWERTY."
+	echo ""
+	echo "Si vous ne possédez pas un clavier QWERTY, vous pouvez"
+	echo "ouvrir un autre terminal et le lancer"
+	echo "setxkbmap fr pour azerty, setxkbmap es pour Espagnol..."
+else
+	echo "By default,"
+	echo "DellardOS is configured as a QWERTY keyboard."
+	echo ""
+	echo "If you can change the keyboard layout by opening another"
+	echo "terminal and run"
+	echo "setxkbmap fr for azerty, setxkbmap es for spanish..."
+fi
+
+sleep 3
+
+clear
+
+if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+	echo "Voulez-vous creer un nouveau compte ?"
+	echo "Confirmez en tapant : yes"
+else
+	echo "Do you want to create a new account ?"
+	echo "Confirm by typing : yes"
+fi
+	echo ""
+
+read choice
+
+clear
+clear
+
+if [ "$choice" = "yes" ]; then
+	
+	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+		echo "Veuillez tapez un nom a donner a votre nouveau compte"
+		echo "Assurez vous de le taper correctement !"
+	else
+		echo "Please, type a new name for your new account"
+		echo "Make sure you are typing it correctly !"
+		echo "Names are also case sensitive"
+	fi
+
+	echo ""
+		
+	sleep 1
+	
+	read name
+	
+	clear
+	clear
+	
+	
+	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+		echo "Un nouveau compte utilisateur appele $name sera cree"
+		echo "Taper un nouveau mot de passe pour $name quand on vous le demande"
+	else
+		echo "A new account called $name will be created"
+		echo "Type a new password for $name when asked"
+	fi
+		
+	sleep 1
+	
+	sudo adduser $name --force-badname
+	
+	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+		echo "Retenez le !"
+		echo "Vous en aurez besoin..."
+	else
+		echo "Remember it !"
+		echo "You'll need it..."
+	fi
+fi
+
+clear
+clear
+
+	
+if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+	echo "Changez le mot de passe pour root"
+else
+	echo "Change the password for root as well"
+fi
+		
+sleep 1
+	
+sudo passwd root
+
+clear
+clear
+
+dpkg-reconfigure tzdata
+
+clear
+clear
+
+if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+	echo "Voulez-vous installer DellardOS ?"
+	echo "Selon votre configuration, l'installation peut prendre des heures."
+	echo "Confirmez en tapant : install"
+else
+	echo "Do you want to install DellardOS ?"
+	echo "Depending on your PC, this might take hours."
+	echo "Confirm by typing : install"
+fi
+
+read choice
+
+if [ "$choice" = "install" ]; then
+	sudo bootcd2disk
+	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+		gxmessage "Vous pouvez maintenant redemarrer l'ordinateur et enlever le CD/Clé USB."
+	else
+		gxmessage "You may now reboot the computer and remove the CD/USB key."
+	fi
+else
+	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
+		gxmessage "DellardOS n'a pas été installe"
+	else
+		gxmessage "DellardOS was not installed"
+	fi
+fi
+	
+clear
+clear
+
+fi

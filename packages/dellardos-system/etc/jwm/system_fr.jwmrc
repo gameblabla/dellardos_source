@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+
+<JWM>
+    <!-- The root menu. -->
+    <RootMenu onroot="12">
+	<Include>/etc/jwm/debian-menu</Include>
+	<Program icon="folder.png" label="Racine">spacefm $HOME</Program>
+        <Program icon="terminal.png" label="Terminal">x-terminal-emulator</Program>
+
+	<Separator/>
+        <Menu label="Vous">
+            <Program icon="folder.png" label="Racine">spacefm $HOME</Program>
+	    <Program icon="folder.png" label="Bureau">spacefm $HOME/Desktop</Program>
+	    <!--<Program icon="folder.png" label="Trash">spacefm $HOME/.local/share/Trash/files</Program>-->
+        </Menu>
+
+	<Separator/>
+
+        <Menu label="Applications">
+	    <Program icon="terminal.png" label="Xvt">xvt</Program>
+	    <Program icon="terminal.png" label="LXTerminal">lxterminal</Program>
+        </Menu>
+
+        <Menu label="Editeurs">
+        <Program icon="editor.png" label="Leafpad">leafpad</Program>
+	    <Program icon="editor.png" label="Geany">geany</Program>
+        </Menu>
+
+        <Menu label="Multimedia">
+            <Program icon="music.png" label="Music On Console">lxterminal -e mocp --sound-driver alsa</Program>
+	    <Program icon="pict.png" label="Gpicview">gpicview</Program>
+        </Menu>
+
+        <Menu label="Internet">
+            <Program icon="dillo.png" label="Dillo">firejail dillo</Program>
+            <Program icon="netsurf.png" label="Netsurf">firejail netsurf-gtk</Program>
+            <Program icon="qupzilla.png" label="Qupzilla">firejail qupzilla</Program>
+            <Program icon="firefox.png" label="Firefox">firejail firefox</Program>
+            <Program icon="terminal.png" label="Elinks">firejail lxterminal -e elinks</Program>
+            <Program icon="mail.png" label="Sylpheed">sylpheed</Program>
+        </Menu>
+
+        <!--<Menu icon="wine.png" label="Wine">
+            <Program label="Winetricks">winetricks</Program>
+            <Program label="Configure Wine">winecfg</Program>
+	    <Separator/>
+            <Program label="Notepad">notepad</Program>
+            <Program label="Wineconsole">wineconsole</Program>
+        </Menu>-->
+
+        <Menu label="Systeme">
+	        <Program label="Mettre a jour DellardOS">lxqt-sudo upgrade.sh</Program>
+		<Separator/>
+	        <Menu label="Parametres">
+			<Program label="Synaptic">lxqt-sudo synaptic</Program>
+			<Program label="Information Systeme">hardinfo</Program>	
+		    <Program label="Resolution d'ecran">lxrandr</Program>
+	        <Program label="Clavier">lxqt-sudo lxterminal -e dpkg-reconfigure keyboard-configuration</Program>
+		    <Program label="Parametres de connection">lxqt-sudo /usr/bin/internet.sh</Program>
+			<!--<Program icon="editor.png" label="Edit Menu">lxqt-sudo leafpad /usr/etc/system.jwmrc</Program>-->
+        	</Menu>
+	        <Menu label="Programmes">
+		    <Program label="Gparted">lxqt-sudo /usr/sbin/gparted</Program>
+		    <Program label="Htop">xvt -rv -e htop</Program>
+			<Program label="LXTask">lxtask</Program>
+		    <Program label="LXAppearance">lxappearance</Program>
+        	</Menu>
+	        <Menu label="Langage">
+			<Program label="English">lxqt-sudo changetoen.sh</Program>
+			<Program label="Francais">lxqt-sudo changetofr.sh</Program>
+        	</Menu>
+	        <Menu label="Audio">
+			<Program icon="music.png" label="Volume sonore">xvt -e alsamixer</Program>
+        	</Menu>
+        </Menu>
+
+	<Separator/>
+    <Separator/>
+
+        <Menu label="Eteindre...">
+		 <Program label="Eteindre ordinateur">lxqt-sudo /sbin/poweroff</Program>
+		 <Program label="Redemarrer">lxqt-sudo reboot</Program>
+        </Menu>
+        <Restart label="Relancer JWM"/>
+	<Exit label="Deconnecter" confirm="true" icon="quit.png"/>
+
+    </RootMenu>
+
+    <!-- Tray at the bottom. -->
+    <Tray x="0" y="-1" height="32" autohide="off">
+        <TrayButton icon="logo.png" label="">root:1</TrayButton>
+        <!-- <TrayButton label="">showdesktop</TrayButton> -->
+        <!-- <Pager labeled="true"/> -->    
+        <TaskList maxwidth="256"/>
+        <Dock/>
+		<!-- <Swallow name="wicd-gtk"> wicd-gtk --tray </Swallow> -->
+        <Clock>xclock</Clock>
+    </Tray>
+
+    <!-- Visual Styles -->
+    <WindowStyle>
+        <Font>Sans-9:bold</Font>
+        <Width>4</Width>
+        <Height>21</Height>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#A900A9</Background>
+        <Outline>#000000</Outline>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#4E29AE</Background>
+            <Outline>#000000</Outline>
+        </Active>
+    </WindowStyle>
+    <TrayStyle>
+        <Font>Sans-9</Font>
+        <Background>#302C70:#1A1561</Background>
+        <Foreground>#FFFFFF</Foreground>
+        <Active>
+       	    <Background>#402C70</Background>
+            <Foreground>#FFFFFF</Foreground>
+        </Active>
+    </TrayStyle>
+    <TaskListStyle>
+        <Foreground>#AAAAAA</Foreground>
+        <Background>#201061:#302C70</Background>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#474380:#302C70</Background>
+        </Active>
+    </TaskListStyle>
+    <PagerStyle>
+        <Outline>#000000</Outline>
+        <Text>#FFFFFF</Text>
+        <Foreground>#444444</Foreground>
+        <Background>#111111</Background>
+        <Active>
+            <Foreground>#000000</Foreground>
+            <Background>#333333</Background>
+        </Active>
+    </PagerStyle>
+    <MenuStyle>
+        <Font>Sans-10</Font>
+        <Foreground>#FFFFFF</Foreground>
+        <Background>#302C70</Background>
+        <Active>
+            <Foreground>#FFFFFF</Foreground>
+            <Background>#4077CC</Background>
+        </Active>
+        <Opacity>0.85</Opacity>
+    </MenuStyle>
+    <PopupStyle>
+        <Font>Sans-9</Font>
+        <Outline>#000000</Outline>
+        <Foreground>#000000</Foreground>
+        <Background>#999999</Background>
+    </PopupStyle>
+
+    <!-- Path where icons can be found.
+         IconPath can be listed multiple times to allow searching
+         for icons in multiple paths.
+      -->
+    <IconPath>
+        /usr/share/dellardos/icons
+    </IconPath>
+
+    <!-- Virtual Desktops -->
+    <!-- Desktop tags can be contained within Desktops for desktop names. -->
+    <Desktops width="1" height="1">
+        <!-- Default background. Note that a Background tag can be
+              contained within a Desktop tag to give a specific background
+              for that desktop.
+         -->
+       <!-- <Background type="solid">#000000</Background> -->
+       <Background type="gradient">#111111:#000000</Background>
+    </Desktops>
+
+    <!-- Double click speed (in milliseconds) -->
+    <DoubleClickSpeed>400</DoubleClickSpeed>
+
+    <!-- Double click delta (in pixels) -->
+    <DoubleClickDelta>2</DoubleClickDelta>
+
+    <!-- The focus model (sloppy or click) -->
+    <FocusModel>click</FocusModel>
+
+    <!-- The snap mode (none, screen, or border) -->
+    <SnapMode distance="10">none</SnapMode>
+
+    <!-- The move mode (outline or opaque) -->
+    <MoveMode>opaque</MoveMode>
+
+    <!-- The resize mode (outline or opaque) -->
+    <ResizeMode>outline</ResizeMode>
+
+    <!-- Key bindings -->
+    <Key key="Up">up</Key>
+    <Key key="Down">down</Key>
+    <Key key="Right">right</Key>
+    <Key key="Left">left</Key>
+    <Key key="h">left</Key>
+    <Key key="j">down</Key>
+    <Key key="k">up</Key>
+    <Key key="l">right</Key>
+    <Key key="Return">select</Key>
+    <Key key="Escape">escape</Key>
+
+    <Key key="F12">exec:lxtask</Key>
+    <Key mask="A" key="F12">exec:xkill</Key>
+
+    <Key mask="A" key="Tab">nextstacked</Key>
+    <Key mask="A" key="F4">close</Key>
+    <Key mask="A" key="#">desktop#</Key>
+    <Key mask="A" key="F1">root:1</Key>
+    <Key mask="A" key="F2">window</Key>
+    <Key mask="A" key="F10">maximize</Key>
+    <Key mask="A" key="Right">rdesktop</Key>
+    <Key mask="A" key="Left">ldesktop</Key>
+    <Key mask="A" key="Up">udesktop</Key>
+    <Key mask="A" key="Down">ddesktop</Key>
+</JWM>
