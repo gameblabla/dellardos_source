@@ -1,2 +1,7 @@
 *.o
 *.gpg
+debian/db
+debian/dists
+debian/pool
+packages/*.deb
+packages/xorg

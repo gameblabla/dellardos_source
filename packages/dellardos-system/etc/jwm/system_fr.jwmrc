@@ -27,7 +27,8 @@
         </Menu>
 
         <Menu label="Multimedia">
-            <Program icon="music.png" label="Music On Console">lxterminal -e mocp --sound-driver alsa</Program>
+		<Program icon="music.png" label="LXMusic">lxmusic</Program>
+		<Program icon="music.png" label="Music On Console">lxterminal -e mocp --sound-driver alsa</Program>
 	    <Program icon="pict.png" label="Gpicview">gpicview</Program>
         </Menu>
 
@@ -170,8 +171,8 @@
               contained within a Desktop tag to give a specific background
               for that desktop.
          -->
-       <!-- <Background type="solid">#000000</Background> -->
-       <Background type="gradient">#111111:#000000</Background>
+      <Background type="solid">#000000</Background>
+       <!--<Background type="gradient">#111111:#000000</Background>-->
     </Desktops>
 
     <!-- Double click speed (in milliseconds) -->

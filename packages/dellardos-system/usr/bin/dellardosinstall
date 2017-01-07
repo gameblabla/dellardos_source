@@ -80,6 +80,7 @@ if [ "$choice" = "yes" ]; then
 	sleep 1
 	
 	sudo adduser $name --force-badname
+	sudo adduser $name sudo
 	
 	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
 		echo "Retenez le !"
@@ -88,6 +89,8 @@ if [ "$choice" = "yes" ]; then
 		echo "Remember it !"
 		echo "You'll need it..."
 	fi
+	
+	sleep 5
 fi
 
 clear
@@ -95,14 +98,14 @@ clear
 
 	
 if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
-	echo "Changez le mot de passe pour root"
+	echo "Changez le mot de passe pour le compte root"
 else
-	echo "Change the password for root as well"
+	echo "Change the password for root"
 fi
 		
 sleep 1
 	
-sudo passwd root
+passwd root
 
 clear
 clear
@@ -125,6 +128,8 @@ fi
 read choice
 
 if [ "$choice" = "install" ]; then
+	killall systemd-udevd
+	killall logsave
 	sudo bootcd2disk
 	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
 		gxmessage "Vous pouvez maintenant redemarrer l'ordinateur et enlever le CD/Clé USB."
@@ -133,7 +138,7 @@ if [ "$choice" = "install" ]; then
 	fi
 else
 	if [ "$LC_ALL" = "fr_FR.UTF-8" ]; then
-		gxmessage "DellardOS n'a pas été installe"
+		gxmessage "DellardOS n'a pas été installé"
 	else
 		gxmessage "DellardOS was not installed"
 	fi
