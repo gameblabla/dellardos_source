@@ -1,0 +1,14 @@
+Package: ceni
+Version: 2.33
+Architecture: all
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Installed-Size: 142
+Depends: perl, libcurses-ui-perl, libexpect-perl, libterm-readkey-perl, ifupdown, udev, wpasupplicant
+Recommends: resolvconf
+Suggests: wpagui
+Section: net
+Priority: optional
+Description: Curses interface to /etc/network/interfaces
+ A Curses user interface for configuring network interfaces with ifupdown.
+ Ceni can manage basic network interface ifupdown configuration stanzas for
+ ethernet and wireless devices.

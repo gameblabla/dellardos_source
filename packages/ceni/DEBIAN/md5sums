@@ -1,0 +1,16 @@
+3dd5b9bf9093ea683cff080a8e9f8f1a  usr/bin/Ceni
+6e890a69c3c8dded79c7b91c8f1b1139  usr/bin/nicinfo
+a0ea82837cccc3fd0bf03873a13cb2e4  usr/share/applications/ceni.desktop
+51448d3d98c1ae64f28bf45d6f644ba7  usr/share/doc/ceni/changelog.gz
+d0378d60699e82cbd3912d3c3e8dc555  usr/share/doc/ceni/copyright
+6f6303a77b85f37bb12383f8171a58e9  usr/share/icons/hicolor/128x128/apps/ceni.png
+f581267f04041e12d019cbe72cf503ba  usr/share/icons/hicolor/16x16/apps/ceni.png
+6312210f303f7d03f1302c799b533925  usr/share/icons/hicolor/22x22/apps/ceni.png
+060dc90e0ceec38994e8da795757b5ca  usr/share/icons/hicolor/32x32/apps/ceni.png
+bb5358b8cddb3ab18ea4412791d8b762  usr/share/icons/hicolor/48x48/apps/ceni.png
+019e949550a1db81a8e7134919d7ce4c  usr/share/icons/hicolor/64x64/apps/ceni.png
+5d9be0695fba888bb9647be1ba03f55f  usr/share/icons/hicolor/scalable/apps/ceni.svg
+0186b01baff24e89f740df997ff1a685  usr/share/man/man1/Ceni.1p.gz
+17d506c31eb4c19541fc41d01844f70b  usr/share/man/man1/nicinfo.1p.gz
+7ec85e08658d34b86284c7448764ff6e  usr/share/man/man3/Ceni::Backend.3pm.gz
+6da1de0122166226c11325bd41630fc3  usr/share/perl5/Ceni/Backend.pm
